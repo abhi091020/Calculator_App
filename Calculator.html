@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .mdiv
+        {
+            height: 100vh;
+            width: 100%;
+            background-color: white;
+            position: fixed;
+            top: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calc
+        {
+            width: 310px;
+            height: 400px;
+            background-color: lightgray;
+            border-radius: 15px ;
+        }
+        .btn
+        {
+            background-color: grey;
+            width: 23% ;
+            align-items: center;
+            height: 50px;
+        }
+
+        .ac
+        {
+            background-color: rgb(226, 226, 183);
+            width: 23% ;
+            align-items: center;
+            height: 50px;
+        }
+
+        .c
+        {
+            background-color: rgb(226, 226, 183);
+            width: 23% ;
+            align-items: center;
+            height: 50px;
+        }
+
+        /* zero */
+        .btnn
+        {
+            background-color: gray;
+            width: 47.4% ;
+            align-items: center;
+            height: 50px;
+        }
+
+        .op
+        {
+            background-color: white;
+            width: 105%;
+            height: 120px;
+            text-align: right;
+            align-self: center;
+            margin-left: 8px;
+            margin-top: 10px;
+            border-radius: 10px;
+            font-size: 50px ;
+            color: white;
+            background-color: black;
+            padding-right: 50px;
+        }
+
+        .oprt
+        {
+            background-color: orange;
+            width: 23% ;
+            align-items: center;
+            height: 50px ;
+            
+        }
+        .outerop
+        {
+            height: 140px;
+            width: 90% ;
+        }
+        .buttons
+        {
+            margin-left: 10px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="mdiv">
+        <div class="calc">
+        <form>
+            <div class="outerop">
+                <input type="text" name="op" class="op">
+            </div>
+            <div class="buttons">
+            <div>
+                <input type="button" name="AC" value="AC" onclick="op.value=''" class="btn">
+                <input type="button" name="C" value="C" onclick="op.value=''" class="btn">
+                <input type="button" name="mod" value="%" onclick="op.value+='%'" class="oprt">
+                <input type="button" name="operator" value="/" onclick="op.value+='/'" class="oprt">
+            </div>
+
+            <div>
+                <input type="button" name="number" value="9" onclick="op.value+='9'" class="btn">
+                <input type="button" name="number" value="8" onclick="op.value+='8'" class="btn">
+                <input type="button" name="number" value="7" onclick="op.value+='7'" class="btn">
+                <input type="button" name="operator" value="X" onclick="op.value+='*'" class="oprt">
+            </div>
+
+            <div>
+                <input type="button" name="number" value="4" onclick="op.value+='4'" class="btn">
+                <input type="button" name="number" value="5" onclick="op.value+='5'" class="btn">
+                <input type="button" name="number" value="6" onclick="op.value+='6'" class="btn">
+                <input type="button" name="operator" value="-" onclick="op.value+='-'" class="oprt">
+            </div>
+
+            <div>
+                <input type="button" name="number" value="1" onclick="op.value+='1'" class="btn">
+                <input type="button" name="number" value="2" onclick="op.value+='2'" class="btn">
+                <input type="button" name="number" value="3" onclick="op.value+='3'" class="btn">
+                <input type="button" name="operator" value="+" onclick="op.value+='+'" class="oprt">
+            </div>
+
+            <div>
+                <input type="button" name="number" value="0" onclick="op.value+='0'" class="btnn">
+                <input type="button" name="operator" value="." onclick="op.value+='.'" class="oprt">
+                <input type="button" name="operator" value="=" onclick="op.value=eval(op.value)" class="oprt">
+            </div>
+        </div>
+        </form>
+    </div>
+    </div>
+    
+</body>
+</html>
